@@ -1,0 +1,34 @@
+{
+  "name": "willphp/view",
+  "description": "view组件用于处理php框架视图",
+  "keywords": [
+    "willphp",
+    "一鱼框架",
+    "视图处理",
+    "模板引擎"
+  ],
+  "homepage": "http://www.113344.com/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "no-mind",
+      "email": "24203741@qq.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=5.6.0",
+    "willphp/config": "~1.0",
+    "willphp/route": "~1.0",
+    "willphp/cache": "~1.0",
+    "willphp/session": "~1.0"
+  },
+  "autoload": {
+    "files": [
+      "src/helper.php"
+    ],
+    "psr-4": {
+      "willphp\\view\\": "src"
+    }
+  }
+}
