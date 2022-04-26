@@ -150,18 +150,13 @@ class Base {
 	 */
 	protected function parse() {
 		$this->compile();
-<<<<<<< HEAD
 		ob_start();	
 		array_walk_recursive(self::$vars, 'self::parseVars');		
-=======
-		ob_start();
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 		extract(self::$vars);
 		include $this->compilefile;
 		return ob_get_clean();
 	}
 	/**
-<<<<<<< HEAD
 	 * 输出前处理数据
 	 * @param string $value
 	 * @param string $key
@@ -173,8 +168,6 @@ class Base {
 		}
 	}	
 	/**
-=======
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 	 * 模板编译
 	 * @return $this
 	 */
@@ -195,11 +188,7 @@ class Base {
 	 * @return string
 	 */
 	protected function csrf($content) {
-<<<<<<< HEAD
 		if (Config::get('view.csrf_check')) {
-=======
-		if (Config::get('route.csrf_check')) {
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 			$content = preg_replace('#(<form.*>)#', '$1'.PHP_EOL.'<?php echo csrf_field();?>', $content);
 		}
 		return $content;

@@ -42,19 +42,11 @@ trait Jump {
 	protected function success($msg = '', $url = null) {
 		if (empty($msg)) {
 			$msg = $this->codes[200];
-<<<<<<< HEAD
 		}		
 		if ($this->isApi || $this->isAjax()) {
 			$this->json(200, $msg, [], $url);
 		}
 		$url = is_null($url)? '' : Route::buildUrl($url);
-=======
-		}			
-		$url = is_null($url)? '' : Route::buildUrl($url);	
-		if ($this->isApi || $this->isAjax()) {
-			$this->json(200, $msg, [], $url);
-		}		
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 		$res = ['code' => 200, 'status' => 1, 'msg' => $msg, 'url' => $url];
 		echo View::fetch('public:jump', $res);
 		exit();
@@ -68,18 +60,11 @@ trait Jump {
 		if (empty($msg)) {
 			$msg = $this->codes[400];
 		}		
-<<<<<<< HEAD
 		$url = is_null($url)? 'javascript:history.back(-1);' : $url;			
 		if ($this->isApi || $this->isAjax()) {
 			$this->json(400, $msg, [], $url);
 		}	
 		$url = Route::buildUrl($url);
-=======
-		$url = is_null($url)? 'javascript:history.back(-1);' : Route::buildUrl($url);
-		if ($this->isApi || $this->isAjax()) {
-			$this->json(400, $msg, [], $url);
-		}		
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 		$res = ['code' => 400, 'status' => 0, 'msg' => $msg, 'url' => $url];
 		echo View::fetch('public:jump', $res);
 		exit;
@@ -124,11 +109,7 @@ trait Jump {
 			header("refresh:{$time};url={$url}");
 		}
 		exit();
-<<<<<<< HEAD
 	}	
-=======
-	}
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 	/**
 	 * 是否Ajax提交
 	 * @return bool

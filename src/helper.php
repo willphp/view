@@ -10,7 +10,6 @@ if (!function_exists('view')) {
 		return \willphp\view\View::make($file, $vars);
 	}
 }
-<<<<<<< HEAD
 if (!function_exists('view_with')) {
 	/**
 	 * 分配变量到模板
@@ -22,8 +21,6 @@ if (!function_exists('view_with')) {
 		return \willphp\view\View::with($vars, $value);
 	}
 }
-=======
->>>>>>> 374112219767831c48244a3915ce4e325702f7aa
 if (!function_exists('view_update')) {
 	/**
 	 * 更新模板缓存
